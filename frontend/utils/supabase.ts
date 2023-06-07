@@ -1,9 +1,4 @@
 import { createClient, SupabaseClientOptions } from "@supabase/supabase-js";
-import Moralis from 'moralis';
-
-Moralis.start({
-  apiKey: 'GY1R06ijqXw6RCKkZKHaZinCKMiFWh5IzbsTKEF0kFpILZMKYP4HamojrOBi9Kh8',
-});
 
 export const cookieName = "sb-access-token";
 
