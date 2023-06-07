@@ -1,12 +1,7 @@
 import { format, subDays } from "date-fns";
 import React from "react";
-import {
-  VictoryAxis,
-  VictoryChart,
-  VictoryContainer,
-  VictoryLine,
-  VictoryTheme,
-} from "victory";
+
+import { VictoryChart, VictoryContainer, VictoryTheme } from "victory";
 
 type RequestStat = {
   date: string;
@@ -37,14 +32,6 @@ export const RequestsPerDayChart: React.FC<RequestsPerDayChartProps> = ({
       domainPadding={20}
       theme={VictoryTheme.material}
       containerComponent={<VictoryContainer responsive={true} />}
-    >
-      <VictoryAxis
-        tickFormat={(tick) => {
-          return `${tick.split("/")[0]}/${tick.split("/")[1]}`;
-        }}
-      />
-      <VictoryAxis dependentAxis />
-      <VictoryLine data={data} x="date" y="requests_count" />
-    </VictoryChart>
+    ></VictoryChart>
   );
 };
